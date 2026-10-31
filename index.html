@@ -1,1 +1,1172 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#070b16">
+<meta name="description" content="Aamir Hassan - IT & Cybersecurity Engineer, System Administrator and IT Infrastructure Professional.">
+<title>Aamir Hassan | IT & Cybersecurity Engineer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root {
+  --bg: #070b16;
+  --panel: #10182a;
+  --panel2: #131e33;
+  --blue: #38bdf8;
+  --cyan: #22d3ee;
+  --purple: #818cf8;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --border: rgba(148,163,184,.15);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+  line-height:1.7;
+}
+
+body::before {
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  background:
+    radial-gradient(ellipse at 15% 15%,rgba(14,165,233,.13),transparent 40%),
+    radial-gradient(ellipse at 85% 45%,rgba(99,102,241,.12),transparent 40%),
+    radial-gradient(ellipse at 50% 100%,rgba(34,211,238,.07),transparent 40%);
+}
+
+#particles {
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+}
+
+a { color:inherit; text-decoration:none; }
+
+.container {
+  width:min(1120px,90%);
+  margin:auto;
+}
+
+section { padding:100px 0; }
+
+.section-title {
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(30px,5vw,43px);
+  font-weight:700;
+  margin-bottom:12px;
+}
+
+.section-title span {
+  background:linear-gradient(90deg,var(--blue),var(--purple));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.section-subtitle {
+  color:var(--muted);
+  margin-bottom:42px;
+}
+
+.gradient-line {
+  height:3px;
+  width:65px;
+  border-radius:10px;
+  background:linear-gradient(90deg,var(--cyan),var(--purple));
+  margin:15px 0 25px;
+}
+
+/* NAVIGATION */
+
+header {
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:1000;
+  background:rgba(7,11,22,.78);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);
+}
+
+nav {
+  min-height:75px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo {
+  font-family:'Space Grotesk',sans-serif;
+  font-size:23px;
+  font-weight:700;
+}
+
+.logo span { color:var(--blue); }
+
+.nav-links {
+  display:flex;
+  gap:25px;
+  list-style:none;
+}
+
+.nav-links a {
+  font-size:13px;
+  color:var(--muted);
+  transition:.3s;
+}
+
+.nav-links a:hover { color:var(--cyan); }
+
+.menu-btn {
+  display:none;
+  background:none;
+  border:0;
+  color:white;
+  font-size:23px;
+  cursor:pointer;
+}
+
+/* HERO */
+
+.hero {
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding-top:100px;
+}
+
+.hero-grid {
+  display:grid;
+  grid-template-columns:1.3fr .7fr;
+  align-items:center;
+  gap:55px;
+}
+
+.availability {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  border:1px solid rgba(34,211,238,.3);
+  padding:8px 15px;
+  border-radius:50px;
+  color:var(--cyan);
+  background:rgba(34,211,238,.06);
+  font-size:12px;
+  margin-bottom:25px;
+}
+
+.dot {
+  width:8px;
+  height:8px;
+  background:#22c55e;
+  border-radius:50%;
+  box-shadow:0 0 12px #22c55e;
+  animation:pulse 1.7s infinite;
+}
+
+@keyframes pulse {
+  50% { opacity:.35; transform:scale(.7); }
+}
+
+.hero h1 {
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(45px,7vw,76px);
+  line-height:1.08;
+  letter-spacing:-3px;
+  margin-bottom:15px;
+}
+
+.hero h1 span {
+  background:linear-gradient(90deg,#38bdf8,#818cf8,#22d3ee);
+  background-size:200%;
+  animation:gradient 5s ease infinite;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+@keyframes gradient {
+  50% { background-position:100%; }
+}
+
+.hero h2 {
+  font-size:clamp(17px,3vw,24px);
+  color:#cbd5e1;
+  font-weight:500;
+  margin-bottom:20px;
+}
+
+.hero p {
+  color:var(--muted);
+  max-width:620px;
+  font-size:15px;
+}
+
+.hero-buttons {
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:32px;
+}
+
+.btn {
+  padding:13px 23px;
+  border-radius:9px;
+  font-size:13px;
+  font-weight:700;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  transition:.3s;
+  cursor:pointer;
+}
+
+.btn-primary {
+  background:linear-gradient(110deg,#0284c7,#6366f1);
+  color:white;
+  box-shadow:0 8px 28px rgba(14,165,233,.22);
+}
+
+.btn-primary:hover {
+  transform:translateY(-4px);
+  box-shadow:0 12px 35px rgba(14,165,233,.4);
+}
+
+.btn-outline {
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.03);
+}
+
+.btn-outline:hover {
+  border-color:var(--cyan);
+  color:var(--cyan);
+  transform:translateY(-4px);
+}
+
+.profile-card {
+  position:relative;
+  padding:35px;
+  border:1px solid rgba(56,189,248,.3);
+  border-radius:25px;
+  background:linear-gradient(145deg,rgba(19,30,51,.9),rgba(8,14,27,.9));
+  text-align:center;
+  box-shadow:0 0 60px rgba(56,189,248,.09);
+  animation:float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  50% { transform:translateY(-12px); }
+}
+
+.avatar {
+  width:165px;
+  height:165px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  margin:0 auto 23px;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:57px;
+  font-weight:700;
+  background:linear-gradient(135deg,#0284c7,#6366f1);
+  border:5px solid rgba(56,189,248,.2);
+  box-shadow:0 0 35px rgba(56,189,248,.3);
+}
+
+.profile-card h3 {
+  font-size:22px;
+  font-family:'Space Grotesk',sans-serif;
+}
+
+.profile-card p {
+  font-size:13px;
+  color:var(--muted);
+  margin:7px 0 20px;
+}
+
+.profile-tags {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:8px;
+}
+
+.profile-tags span {
+  font-size:10px;
+  color:var(--cyan);
+  background:rgba(56,189,248,.08);
+  border:1px solid rgba(56,189,248,.15);
+  padding:6px 10px;
+  border-radius:30px;
+}
+
+/* COMMON CARDS */
+
+.card {
+  background:linear-gradient(145deg,rgba(19,30,51,.88),rgba(12,19,34,.9));
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:25px;
+  transition:.35s;
+}
+
+.card:hover {
+  transform:translateY(-7px);
+  border-color:rgba(56,189,248,.5);
+  box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+.about-grid {
+  display:grid;
+  grid-template-columns:1.3fr .7fr;
+  gap:25px;
+}
+
+.about-text p {
+  color:var(--muted);
+  margin-bottom:15px;
+  font-size:14px;
+}
+
+.info-list { list-style:none; }
+
+.info-list li {
+  padding:12px 0;
+  border-bottom:1px solid var(--border);
+  font-size:13px;
+}
+
+.info-list strong {
+  color:var(--cyan);
+  display:inline-block;
+  min-width:95px;
+}
+
+/* STATS */
+
+.stats {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:25px;
+}
+
+.stat {
+  text-align:center;
+  padding:23px 10px;
+}
+
+.stat h3 {
+  font-size:34px;
+  color:var(--cyan);
+  font-family:'Space Grotesk',sans-serif;
+}
+
+.stat p { color:var(--muted); font-size:12px; }
+
+/* SKILLS */
+
+.skills-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.skill-card h3 {
+  font-size:17px;
+  margin-bottom:18px;
+}
+
+.skill-card h3 i {
+  color:var(--cyan);
+  margin-right:10px;
+}
+
+.skill-tags {
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+}
+
+.skill-tags span {
+  background:rgba(56,189,248,.07);
+  border:1px solid rgba(56,189,248,.15);
+  padding:8px 11px;
+  border-radius:7px;
+  color:#cbd5e1;
+  font-size:11px;
+  transition:.3s;
+}
+
+.skill-tags span:hover {
+  color:var(--cyan);
+  border-color:var(--cyan);
+  transform:scale(1.05);
+}
+
+/* EXPERIENCE */
+
+.timeline {
+  position:relative;
+  max-width:850px;
+  margin:auto;
+}
+
+.timeline::before {
+  content:"";
+  position:absolute;
+  left:10px;
+  top:10px;
+  bottom:10px;
+  width:2px;
+  background:linear-gradient(var(--blue),var(--purple),transparent);
+}
+
+.timeline-item {
+  position:relative;
+  padding-left:42px;
+  margin-bottom:30px;
+}
+
+.timeline-item::before {
+  content:"";
+  position:absolute;
+  width:13px;
+  height:13px;
+  left:4px;
+  top:8px;
+  border-radius:50%;
+  background:var(--cyan);
+  box-shadow:0 0 15px var(--cyan);
+}
+
+.timeline-item h3 { font-size:19px; }
+
+.timeline-item .company {
+  color:var(--cyan);
+  font-size:13px;
+  margin:5px 0 12px;
+}
+
+.timeline-item p {
+  color:var(--muted);
+  font-size:13px;
+}
+
+.timeline-item ul {
+  padding-left:18px;
+  color:var(--muted);
+  font-size:13px;
+  margin-top:12px;
+}
+
+.timeline-item li { margin-bottom:7px; }
+
+/* PROJECTS */
+
+.projects-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.project-icon {
+  font-size:28px;
+  color:var(--cyan);
+  margin-bottom:17px;
+}
+
+.project-card h3 { margin-bottom:10px; }
+
+.project-card p {
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* EDUCATION */
+
+.education-card {
+  display:flex;
+  gap:20px;
+  align-items:center;
+}
+
+.education-icon {
+  width:60px;
+  height:60px;
+  flex-shrink:0;
+  display:grid;
+  place-items:center;
+  border-radius:13px;
+  background:rgba(56,189,248,.1);
+  color:var(--cyan);
+  font-size:25px;
+}
+
+.education-card p {
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* CONTACT */
+
+.contact-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:17px;
+}
+
+.contact-card {
+  text-align:center;
+  padding:24px 10px;
+  overflow-wrap:anywhere;
+}
+
+.contact-card i {
+  font-size:27px;
+  color:var(--cyan);
+  margin-bottom:12px;
+}
+
+.contact-card h3 { font-size:15px; }
+
+.contact-card p {
+  color:var(--muted);
+  font-size:11px;
+  margin-top:5px;
+}
+
+.socials {
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin-top:32px;
+}
+
+.socials a {
+  width:45px;
+  height:45px;
+  border:1px solid var(--border);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  transition:.3s;
+}
+
+.socials a:hover {
+  background:var(--blue);
+  color:#06101d;
+  transform:translateY(-5px);
+}
+
+/* FOOTER */
+
+footer {
+  border-top:1px solid var(--border);
+  padding:25px 0;
+  text-align:center;
+  color:var(--muted);
+  font-size:12px;
+}
+
+footer span { color:var(--cyan); }
+
+/* SCROLL EFFECT */
+
+.reveal {
+  opacity:0;
+  transform:translateY(35px);
+  transition:opacity .8s ease,transform .8s ease;
+}
+
+.reveal.active {
+  opacity:1;
+  transform:translateY(0);
+}
+
+#topBtn {
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  width:45px;
+  height:45px;
+  background:linear-gradient(120deg,#0284c7,#6366f1);
+  border:0;
+  border-radius:10px;
+  color:white;
+  cursor:pointer;
+  display:none;
+  z-index:99;
+  font-size:17px;
+}
+
+/* MOBILE */
+
+@media(max-width:850px) {
+  .hero-grid,.about-grid { grid-template-columns:1fr; }
+  .hero { padding-top:130px; }
+  .profile-card { max-width:420px; margin:auto; width:100%; }
+  .skills-grid { grid-template-columns:repeat(2,1fr); }
+  .projects-grid { grid-template-columns:repeat(2,1fr); }
+}
+
+@media(max-width:600px) {
+  section { padding:75px 0; }
+  .nav-links {
+    display:none;
+    position:absolute;
+    top:75px;
+    left:0;
+    width:100%;
+    background:#0b1222;
+    padding:20px;
+    flex-direction:column;
+    gap:18px;
+    border-bottom:1px solid var(--border);
+  }
+  .nav-links.show { display:flex; }
+  .menu-btn { display:block; }
+  .hero h1 { letter-spacing:-2px; }
+  .skills-grid,.projects-grid,.contact-grid { grid-template-columns:1fr; }
+  .stats { grid-template-columns:1fr 1fr; }
+  .profile-card { padding:25px 15px; }
+  .education-card { align-items:flex-start; }
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+
+<header>
+  <nav class="container">
+    <a href="#home" class="logo">AAMIR<span>.</span></a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+<div class="container hero-grid">
+
+  <div class="reveal">
+    <div class="availability">
+      <span class="dot"></span>
+      IT PROFESSIONAL · SAUDI ARABIA
+    </div>
+
+    <h1>Hello, I'm<br><span>Aamir Hassan.</span></h1>
+
+    <h2>IT & Cybersecurity Engineer</h2>
+
+    <p>
+      IT professional with 2+ years of experience in technical support,
+      system administration, IT infrastructure, networking and cybersecurity.
+      Passionate about building secure, reliable and efficient technology environments.
+      Currently working in Saudi Arabia.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#contact" class="btn btn-primary">
+        <i class="fas fa-paper-plane"></i> Contact Me
+      </a>
+
+      <a href="resume.pdf" class="btn btn-outline" download>
+        <i class="fas fa-download"></i> Download CV
+      </a>
+    </div>
+  </div>
+
+  <div class="profile-card reveal">
+    <div class="avatar">AH</div>
+    <h3>Aamir Hassan</h3>
+    <p>IT & Cybersecurity Engineer</p>
+
+    <div class="profile-tags">
+      <span>IT Infrastructure</span>
+      <span>Networking</span>
+      <span>Security</span>
+      <span>System Admin</span>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+<div class="container reveal">
+  <h2 class="section-title">About <span>Me</span></h2>
+  <div class="gradient-line"></div>
+  <p class="section-subtitle">Professional background and technical journey</p>
+
+  <div class="about-grid">
+    <div class="card about-text">
+      <p>
+        I am an IT & Cybersecurity Engineer with over two years of
+        experience in IT support, troubleshooting, system administration
+        and infrastructure management.
+      </p>
+      <p>
+        My professional experience includes working with Lenovo India,
+        supporting hardware and software environments, diagnosing technical
+        issues and providing reliable IT solutions.
+      </p>
+      <p>
+        My technical interests include Windows Server administration,
+        Active Directory, networking, virtualization, endpoint support,
+        data protection and cybersecurity fundamentals.
+      </p>
+      <p>
+        I continuously work on improving my technical knowledge and
+        developing practical solutions for modern IT environments.
+      </p>
+    </div>
+
+    <div class="card">
+      <ul class="info-list">
+        <li><strong>Name</strong> Aamir Hassan</li>
+        <li><strong>Profession</strong> IT & Cybersecurity Engineer</li>
+        <li><strong>Experience</strong> 2+ Years</li>
+        <li><strong>Location</strong> Saudi Arabia</li>
+        <li><strong>Education</strong> BCA</li>
+        <li><strong>Speciality</strong> IT Infrastructure</li>
+        <li><strong>Languages</strong> English, Hindi, Urdu</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="card stat">
+      <h3>2+</h3>
+      <p>Years Experience</p>
+    </div>
+    <div class="card stat">
+      <h3>IT</h3>
+      <p>Infrastructure & Support</p>
+    </div>
+    <div class="card stat">
+      <h3>24/7</h3>
+      <p>Learning Mindset</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+<div class="container reveal">
+  <h2 class="section-title">Technical <span>Expertise</span></h2>
+  <div class="gradient-line"></div>
+  <p class="section-subtitle">Technologies, platforms and tools</p>
+
+  <div class="skills-grid">
+
+    <div class="card skill-card">
+      <h3><i class="fas fa-server"></i> System Administration</h3>
+      <div class="skill-tags">
+        <span>Windows Server 2022</span>
+        <span>Active Directory</span>
+        <span>Group Policy</span>
+        <span>DNS</span>
+        <span>DHCP</span>
+        <span>Windows OS</span>
+        <span>User Management</span>
+      </div>
+    </div>
+
+    <div class="card skill-card">
+      <h3><i class="fas fa-network-wired"></i> Networking</h3>
+      <div class="skill-tags">
+        <span>TCP/IP</span>
+        <span>LAN / WAN</span>
+        <span>VPN</span>
+        <span>Network Troubleshooting</span>
+        <span>Switching</span>
+        <span>Network Security</span>
+      </div>
+    </div>
+
+    <div class="card skill-card">
+      <h3><i class="fas fa-shield-halved"></i> Cybersecurity</h3>
+      <div class="skill-tags">
+        <span>Security Fundamentals</span>
+        <span>Endpoint Security</span>
+        <span>Access Control</span>
+        <span>Data Protection</span>
+        <span>Security Best Practices</span>
+      </div>
+    </div>
+
+    <div class="card skill-card">
+      <h3><i class="fas fa-cloud"></i> Virtualization & Cloud</h3>
+      <div class="skill-tags">
+        <span>VMware</span>
+        <span>Hyper-V</span>
+        <span>AWS Fundamentals</span>
+        <span>Azure Fundamentals</span>
+        <span>Virtual Machines</span>
+      </div>
+    </div>
+
+    <div class="card skill-card">
+      <h3><i class="fas fa-database"></i> Storage & Backup</h3>
+      <div class="skill-tags">
+        <span>QNAP NAS</span>
+        <span>Qsync</span>
+        <span>HBS 3</span>
+        <span>Dropbox</span>
+        <span>Data Migration</span>
+        <span>Backup Management</span>
+      </div>
+    </div>
+
+    <div class="card skill-card">
+      <h3><i class="fas fa-laptop-medical"></i> IT Support</h3>
+      <div class="skill-tags">
+        <span>Hardware Diagnostics</span>
+        <span>Software Troubleshooting</span>
+        <span>Microsoft 365</span>
+        <span>Lenovo Diagnostics</span>
+        <span>Driver & BIOS Support</span>
+        <span>Technical Documentation</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+<div class="container reveal">
+  <h2 class="section-title">Professional <span>Experience</span></h2>
+  <div class="gradient-line"></div>
+  <p class="section-subtitle">My professional journey</p>
+
+  <div class="timeline">
+
+    <div class="timeline-item card">
+      <h3>IT & Cybersecurity Engineer</h3>
+      <div class="company">
+        Current Role · Saudi Arabia
+      </div>
+      <p>
+        Working in an IT environment with responsibilities and interests
+        across infrastructure, system administration and technical support.
+      </p>
+      <ul>
+        <li>IT infrastructure and system administration.</li>
+        <li>Windows Server and network administration.</li>
+        <li>Hardware and software troubleshooting.</li>
+        <li>Data storage, backup and access management.</li>
+      </ul>
+    </div>
+
+    <div class="timeline-item card">
+      <h3>Technical Support Engineer</h3>
+      <div class="company">
+        Lenovo India
+      </div>
+      <p>
+        Provided technical support and troubleshooting for Lenovo
+        hardware and software environments.
+      </p>
+      <ul>
+        <li>Diagnosed hardware and software-related issues.</li>
+        <li>Performed system troubleshooting and diagnostics.</li>
+        <li>Supported BIOS, firmware and driver-related issues.</li>
+        <li>Worked with technical support processes and service requests.</li>
+        <li>Documented technical findings and work orders.</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+<div class="container reveal">
+  <h2 class="section-title">Technical <span>Projects</span></h2>
+  <div class="gradient-line"></div>
+  <p class="section-subtitle">Selected technical areas and implementations</p>
+
+  <div class="projects-grid">
+
+    <div class="card project-card">
+      <div class="project-icon"><i class="fas fa-network-wired"></i></div>
+      <h3>Windows Server & Active Directory</h3>
+      <p>
+        Server administration, domain configuration, user management,
+        DNS, DHCP and centralized access management.
+      </p>
+      <div class="skill-tags">
+        <span>Windows Server</span>
+        <span>AD</span>
+        <span>DNS</span>
+      </div>
+    </div>
+
+    <div class="card project-card">
+      <div class="project-icon"><i class="fas fa-database"></i></div>
+      <h3>NAS & Data Management</h3>
+      <p>
+        QNAP storage administration, backup configuration,
+        synchronization and data migration workflows.
+      </p>
+      <div class="skill-tags">
+        <span>QNAP</span>
+        <span>HBS 3</span>
+        <span>Backup</span>
+      </div>
+    </div>
+
+    <div class="card project-card">
+      <div class="project-icon"><i class="fas fa-globe"></i></div>
+      <h3>Web Development</h3>
+      <p>
+        Website development and customization using HTML, CSS,
+        JavaScript and WordPress.
+      </p>
+      <div class="skill-tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>WordPress</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education">
+<div class="container reveal">
+  <h2 class="section-title">Education & <span>Qualifications</span></h2>
+  <div class="gradient-line"></div>
+
+  <div class="card education-card">
+    <div class="education-icon">
+      <i class="fas fa-graduation-cap"></i>
+    </div>
+    <div>
+      <h3>Bachelor of Computer Applications (BCA)</h3>
+      <p>Islamia College of Science & Commerce, Srinagar</p>
+      <p>Graduated: 2024</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+<div class="container reveal">
+  <h2 class="section-title">Let's <span>Connect</span></h2>
+  <div class="gradient-line"></div>
+  <p class="section-subtitle">
+    Have a professional opportunity or technical discussion?
+    Feel free to connect.
+  </p>
+
+  <div class="contact-grid">
+
+    <a class="card contact-card" href="https://wa.me/966553061535" target="_blank" rel="noopener">
+      <i class="fab fa-whatsapp"></i>
+      <h3>WhatsApp</h3>
+      <p>Connect with me</p>
+    </a>
+
+    <a class="card contact-card" href="https://www.instagram.com/iaamirbhat/" target="_blank" rel="noopener">
+      <i class="fab fa-instagram"></i>
+      <h3>Instagram</h3>
+      <p>@iaamirbhat</p>
+    </a>
+
+    <a class="card contact-card" href="https://www.facebook.com/iaamirbhat/" target="_blank" rel="noopener">
+      <i class="fab fa-facebook"></i>
+      <h3>Facebook</h3>
+      <p>@iaamirbhat</p>
+    </a>
+
+  </div>
+
+  <div class="socials">
+    <a href="https://www.instagram.com/iaamirbhat/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/iaamirbhat/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://wa.me/966553061535" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+</div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Designed & Developed by <span>Aamir Hassan</span></p>
+    <p>© <span id="year"></span> Aamir Hassan. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<button id="topBtn" aria-label="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+// MOBILE NAVIGATION
+const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.getElementById('navLinks');
+
+menuBtn.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+  menuBtn.innerHTML = navLinks.classList.contains('show')
+    ? '<i class="fas fa-times"></i>'
+    : '<i class="fas fa-bars"></i>';
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('show');
+    menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+  });
+});
+
+// SCROLL REVEAL
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.reveal').forEach(element => {
+  observer.observe(element);
+});
+
+// BACK TO TOP
+const topBtn = document.getElementById('topBtn');
+
+window.addEventListener('scroll', () => {
+  topBtn.style.display = window.scrollY > 400 ? 'grid' : 'none';
+});
+
+topBtn.addEventListener('click', () => {
+  window.scrollTo({top:0, behavior:'smooth'});
+});
+
+// CURRENT YEAR
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// ANIMATED BACKGROUND PARTICLES
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
+
+let particles = [];
+let animationFrame;
+
+function resizeCanvas() {
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  canvas.width = window.innerWidth * dpr;
+  canvas.height = window.innerHeight * dpr;
+  canvas.style.width = window.innerWidth + 'px';
+  canvas.style.height = window.innerHeight + 'px';
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+  particles = Array.from(
+    {length:Math.min(65, Math.floor(window.innerWidth / 18))},
+    () => ({
+      x:Math.random()*window.innerWidth,
+      y:Math.random()*window.innerHeight,
+      vx:(Math.random()-.5)*.35,
+      vy:(Math.random()-.5)*.35,
+      radius:Math.random()*1.6+.5
+    })
+  );
+}
+
+function animateParticles() {
+  ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
+
+  particles.forEach((p,i) => {
+    p.x += p.vx;
+    p.y += p.vy;
+
+    if(p.x<0 || p.x>window.innerWidth) p.vx *= -1;
+    if(p.y<0 || p.y>window.innerHeight) p.vy *= -1;
+
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.radius,0,Math.PI*2);
+    ctx.fillStyle='rgba(56,189,248,.6)';
+    ctx.fill();
+
+    for(let j=i+1;j<particles.length;j++) {
+      const q=particles[j];
+      const dx=p.x-q.x;
+      const dy=p.y-q.y;
+      const distance=Math.sqrt(dx*dx+dy*dy);
+
+      if(distance<115) {
+        ctx.beginPath();
+        ctx.moveTo(p.x,p.y);
+        ctx.lineTo(q.x,q.y);
+        ctx.strokeStyle=`rgba(56,189,248,${.12*(1-distance/115)})`;
+        ctx.lineWidth=.7;
+        ctx.stroke();
+      }
+    }
+  });
+
+  animationFrame = requestAnimationFrame(animateParticles);
+}
+
+resizeCanvas();
+animateParticles();
+
+window.addEventListener('resize', resizeCanvas);
+
+// REDUCE MOTION FOR ACCESSIBILITY
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  cancelAnimationFrame(animationFrame);
+}
+</script>
+
+</body>
+</html>
+
